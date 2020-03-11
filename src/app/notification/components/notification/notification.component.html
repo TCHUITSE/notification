@@ -1,10 +1,20 @@
-<button mat-icon-button [matMenuTriggerFor]="menu" class="notif" [matMenuTriggerData]="{data: notReadNotifications}" >
+<button mat-icon-button [mdePopoverTriggerFor]="notifPopover"
+    mdePopoverTriggerOn="click" class="notif">
     <mat-icon matBadge="15" matBadgeColor="warn" class="material-icons couleur taille">
         notifications
     </mat-icon>
 </button>
-<mat-menu #menu="matMenu">
-    <ng-template matMenuContent let-data = "data" >
-        <app-onenotification  *ngFor="let item of data"></app-onenotification>
-    </ng-template>
-</mat-menu>
+<mde-popover #notifPopover="mdePopover" [mdePopoverOverlapTrigger]="false" [mdePopoverCloseOnClick]="false">
+    <mat-card style="max-width: 600px">
+      <mat-card-content>
+        A material design popover component created using Angular version 8 with the Angular CDK.
+        <app-onenotification></app-onenotification>
+
+      </mat-card-content>
+      <mat-card-actions align="right">
+        <button (click)="closePopover()" mat-button>Close</button>
+
+        <button (click)="onSubmit()" mat-button>Submit</button>
+      </mat-card-actions>
+    </mat-card>
+</mde-popover>

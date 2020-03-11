@@ -9,10 +9,11 @@ import * as fromNotification from './store/reducers/notification.reducer';
 import { NotificationComponent } from './components/notification/notification.component';
 import {  MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
-import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
 import { OnenotificationComponent } from './components/onenotification/onenotification.component';
 import { MatCardModule } from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+import { MdePopoverModule } from '@material-extended/mde';
 
 
 
@@ -30,9 +31,10 @@ import { MatCardModule } from '@angular/material/card';
     //angular
     MatIconModule,
     MatBadgeModule,
-    MatMenuModule,
     MatButtonModule,
     MatCardModule,
+    MatGridListModule,
+    MdePopoverModule
 
 
 

@@ -10,3 +10,7 @@
     margin-top: 20px;
     margin-left:20px;
 }
+::ng-deep .mat-menu-panel {
+    width: 1000px !important;
+}
+
